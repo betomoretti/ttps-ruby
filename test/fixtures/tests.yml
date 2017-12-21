@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  due_date: 2017-12-21 15:29:42
+  signature_year: one
+
+two:
+  title: MyString
+  due_date: 2017-12-21 15:29:42
+  signature_year: one

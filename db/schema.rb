@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221133406) do
+ActiveRecord::Schema.define(version: 20171221185841) do
 
   create_table "signature_years", force: :cascade do |t|
     t.string "year"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20171221133406) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "title"
+    t.string "due_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "signature_year_id"
+    t.index ["signature_year_id"], name: "index_tests_on_signature_year_id"
   end
 
 end
