@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dni: 2312312
+  number: 1231231
+  name: name
+  last_name: lastname
+  email: email@example.com
+
+two:
+  dni: 2312312
+  number: 1231231
+  name: name
+  last_name: lastname
+  email: email@example.com
