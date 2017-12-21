@@ -1,0 +1,2 @@
+class SignatureYear < ApplicationRecord
+end
