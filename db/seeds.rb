@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+2.times do |i|
+  Teacher.create(email: "teacher#{i}@email.com")
+end
+
 9.times do |i|
   SignatureYear.create(year: "201#{i}")
 end
@@ -23,3 +27,4 @@ end
   TestNote.create(note: 7, test_id: id, student_id: Student.first.id)
   id += 1
 end
+
