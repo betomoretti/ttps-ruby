@@ -3,15 +3,28 @@
 one:
   dni: 2312312
   number: 1231231
-  name: name
-  last_name: lastname
-  email: email@example.com
+  name: Juan
+  last_name: Perez
+  email: juan_perez@email.com
   signature_year: one
-
 two:
-  dni: 2312312
-  number: 1231231
-  name: name
-  last_name: lastname
-  email: email@example.com
+  dni: 2312313
+  number: 1231232
+  name: Pedro
+  last_name: Carlos
+  email: pedro_carlos@email.com
+  signature_year: two
+three:
+  dni: 2312314
+  number: 1231234
+  name: Marcos
+  last_name: Laid
+  email: marcos_laid@email.com
+  signature_year: two
+four:
+  dni: 2312315
+  number: 1231235
+  name: Mirtha
+  last_name: Legrand
+  email: la_chiqui@email.com
   signature_year: two

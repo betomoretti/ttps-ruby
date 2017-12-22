@@ -1,10 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  year: '2015'
+  note: 1.5
+  student: one
+  test: one
+
 two:
-  year: '2016'
-three:
-  year: '2017'
-four:
-  year: '2018'
+  note: 1.5
+  student: one
+  test: two
