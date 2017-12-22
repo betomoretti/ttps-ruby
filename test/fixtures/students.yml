@@ -6,6 +6,7 @@ one:
   name: name
   last_name: lastname
   email: email@example.com
+  signature_year: one
 
 two:
   dni: 2312312
@@ -13,3 +14,4 @@ two:
   name: name
   last_name: lastname
   email: email@example.com
+  signature_year: two
