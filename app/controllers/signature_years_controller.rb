@@ -1,5 +1,6 @@
 class SignatureYearsController < ApplicationController
-  before_action :set_signature_year, only: [:show, :edit, :update, :destroy]
+  before_action :set_signature_year, only: [:show, :edit, :update, :destroy,
+                                            :results]
 
   # GET /signature_years
   # GET /signature_years.json
@@ -58,6 +59,10 @@ class SignatureYearsController < ApplicationController
       format.html { redirect_to signature_years_url, notice: 'Signature year was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def results
+    @test_notes = @signature_year.test_notes
   end
 
   private
