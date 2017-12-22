@@ -14,6 +14,8 @@
   <dd><%= @student.last_name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
   <dd><%= @student.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:signature_year) %>:</strong></dt>
+  <dd><%= @student.signature_year.year %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

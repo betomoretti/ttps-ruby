@@ -44,7 +44,7 @@ class StudentTest < ActiveSupport::TestCase
                           number: '12312312',
                           name: 'asdasd',
                           last_name: 'asdasd')
-
+    student.signature_year = signature_years(:one)
     assert student.save
   end
 

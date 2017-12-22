@@ -50,6 +50,13 @@
     </div>
     <%=f.error_span(:last_name) %>
   </div>
+  <div class="form-group">
+    <%= f.label :signature_year, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.collection_select :signature_year_id, SignatureYear.all, :id, :year, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:signature_year_id) %>
+  </div>
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
