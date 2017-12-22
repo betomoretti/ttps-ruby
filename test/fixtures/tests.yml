@@ -3,9 +3,11 @@
 one:
   title: Primer parcial
   due_date: 2017-12-21 15:29:42
+  note_to_approve: 6.5
   signature_year: three
 
 two:
   title: Segundo parcial
   due_date: 2017-12-21 15:29:42
+  note_to_approve: 6.5
   signature_year: three

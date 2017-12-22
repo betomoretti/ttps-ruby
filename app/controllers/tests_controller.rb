@@ -69,6 +69,6 @@ class TestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def test_params
-      params.require(:test).permit(:title, :due_date, :signature_year_id)
+      params.require(:test).permit(:title,:note_to_approve, :due_date, :signature_year_id)
     end
 end

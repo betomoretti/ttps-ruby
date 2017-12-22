@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171222142154) do
+ActiveRecord::Schema.define(version: 20171222230745) do
 
   create_table "signature_years", force: :cascade do |t|
     t.string "year"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20171222142154) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "signature_year_id"
+    t.float "note_to_approve"
     t.index ["signature_year_id"], name: "index_tests_on_signature_year_id"
   end
 

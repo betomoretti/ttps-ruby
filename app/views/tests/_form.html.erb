@@ -30,6 +30,13 @@
     <%=f.error_span(:due_date) %>
   </div>
   <div class="form-group">
+    <%= f.label :note_to_approve, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :note_to_approve, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:note_to_approve) %>
+  </div>
+  <div class="form-group">
     <%= f.label :signature_year, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
       <%= f.collection_select :signature_year_id, SignatureYear.all, :id, :year, :class => 'form-control' %>
