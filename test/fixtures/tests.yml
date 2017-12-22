@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: Primer parcial
   due_date: 2017-12-21 15:29:42
-  signature_year: one
+  signature_year: three
 
 two:
-  title: MyString
+  title: Segundo parcial
   due_date: 2017-12-21 15:29:42
-  signature_year: one
+  signature_year: three
