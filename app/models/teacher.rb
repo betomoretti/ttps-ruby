@@ -1,4 +1,4 @@
 class Teacher < ApplicationRecord
-  validates :email, presence: true
-  validates_with EmailValidator
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 end

@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :teachers
+
+  authenticated :teacher do
+    root to: 'signature_years#index', as: :authenticated_root
+  end
+  root to: redirect('/teachers/sign_in')
+
   resources :teachers
   resources :test_notes
   resources :tests
@@ -9,5 +16,4 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: 'signature_years#index'
 end

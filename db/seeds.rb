@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 2.times do |i|
-  Teacher.create(email: "teacher#{i}@email.com")
+  Teacher.create(email: "teacher#{i}@email.com", password: "password")
 end
 
 9.times do |i|
