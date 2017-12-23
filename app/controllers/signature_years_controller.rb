@@ -1,7 +1,6 @@
 class SignatureYearsController < ApplicationController
   before_action :set_signature_year, only: [:show, :edit, :update, :destroy,
                                             :results]
-
   # GET /signature_years
   # GET /signature_years.json
   def index
