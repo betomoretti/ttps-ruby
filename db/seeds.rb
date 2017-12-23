@@ -11,20 +11,14 @@
 end
 
 9.times do |i|
-  SignatureYear.create(year: "201#{i}")
+  signature = SignatureYear.create(year: "201#{i}")
+  3.times do |i|
+    Test.create(title: "Parcial ##{i}", note_to_approve: 6.0, due_date: Date.today, signature_year: signature)
+  end
+  6.times do |i|
+    student = Student.create(name: "Name ##{i}", last_name: "LastName ##{i}", email: "student#{i}@email.com", dni: "1234#{i}", number: "1023#{i}", signature_year: signature)
+    signature.tests.each do |test|
+      TestNote.create(note: 7, test: test, student: student)
+    end
+  end
 end
-
-5.times do |i|
-  Test.create(title: "Parcial ##{1}", due_date: Date.today, signature_year_id: SignatureYear.first.id)
-end
-
-5.times do |i|
-  Student.create(name: "Name ##{i}", last_name: "LastName ##{i}", email: "student#{i}@email.com", dni: "1234#{i}", number: "1023#{i}", signature_year_id: SignatureYear.first.id)
-end
-
-5.times do |i|
-  id = 1
-  TestNote.create(note: 7, test_id: id, student_id: Student.first.id)
-  id += 1
-end
-
