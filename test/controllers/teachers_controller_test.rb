@@ -25,21 +25,25 @@ class TeachersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show teacher" do
+    @teacher = teachers(:one)
     get teacher_url(@teacher)
     assert_response :success
   end
 
   test "should get edit" do
+    @teacher = teachers(:one)
     get edit_teacher_url(@teacher)
     assert_response :success
   end
 
   test "should update teacher" do
+    @teacher = teachers(:one)
     patch teacher_url(@teacher), params: { teacher: { email: @teacher.email } }
     assert_redirected_to teacher_url(@teacher)
   end
 
   test "should destroy teacher" do
+    @teacher = teachers(:one)
     assert_difference('Teacher.count', -1) do
       delete teacher_url(@teacher)
     end
