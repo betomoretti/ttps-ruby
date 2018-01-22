@@ -3,6 +3,7 @@ require 'test_helper'
 class SignatureYearsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @signature_year = signature_years(:one)
+    sign_in teachers(:one)
   end
 
   test "should get index" do

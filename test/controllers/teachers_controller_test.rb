@@ -2,7 +2,8 @@ require 'test_helper'
 
 class TeachersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @teacher = teachers(:one)
+    @teacher = {email: "email@email.com", password: "123456"}
+    sign_in teachers(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,7 @@ class TeachersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create teacher" do
     assert_difference('Teacher.count') do
-      post teachers_url, params: { teacher: { email: @teacher.email } }
+      post teachers_url, params: { teacher: @teacher }
     end
 
     assert_redirected_to teacher_url(Teacher.last)

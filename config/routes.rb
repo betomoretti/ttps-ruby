@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :teachers
+  devise_for :teachers, skip: [:registrations]
 
   authenticated :teacher do
     root to: 'signature_years#index', as: :authenticated_root

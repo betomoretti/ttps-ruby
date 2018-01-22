@@ -3,6 +3,7 @@ require 'test_helper'
 class TestNotesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @test_note = test_notes(:one)
+    sign_in teachers(:one)
   end
 
   test "should get index" do
