@@ -48,6 +48,16 @@ class StudentTest < ActiveSupport::TestCase
     assert student.save
   end
 
+  test "shouldn't allow save a user without signature year" do
+    student = Student.new(dni: '123112312312',
+                          email: 'example@email.com',
+                          number: '12312312',
+                          name: 'asdasd',
+                          last_name: 'asdasd')
+
+    assert_not student.save
+  end
+
   test "shouldn't allow save users with an invalid dni" do
     student = Student.new(dni: 'asdas',
                           email: 'example@email.com',
