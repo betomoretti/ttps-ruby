@@ -1,6 +1,6 @@
 class SignatureYearsController < ApplicationController
   before_action :set_signature_year, only: [:show, :edit, :update, :destroy,
-                                            :results]
+                                            :results, :students]
   # GET /signature_years
   # GET /signature_years.json
   def index
@@ -66,6 +66,10 @@ class SignatureYearsController < ApplicationController
     @total_disapproved = @test_notes.where('note < note_to_approve').count
     @total_ausent = @test_notes.where(note: nil).count
     @approved_average = (Float(@total_approved) / Float(@test_notes.count)) * 100
+  end
+
+  def students
+    @students = @signature_year.students
   end
 
   private

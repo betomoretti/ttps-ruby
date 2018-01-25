@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :signature_years do
     member do
       get 'results'
+      get 'students'
     end
   end
 
