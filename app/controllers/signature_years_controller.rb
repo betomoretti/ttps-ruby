@@ -1,6 +1,6 @@
 class SignatureYearsController < ApplicationController
   before_action :set_signature_year, only: [:show, :edit, :update, :destroy,
-                                            :results, :students]
+                                            :results, :students, :tests]
   # GET /signature_years
   # GET /signature_years.json
   def index
@@ -70,6 +70,10 @@ class SignatureYearsController < ApplicationController
 
   def students
     @students = @signature_year.students
+  end
+
+  def tests
+    @tests = @signature_year.tests
   end
 
   private

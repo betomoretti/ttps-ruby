@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     member do
       get 'results'
       get 'students'
+      get 'tests'
     end
   end
 
