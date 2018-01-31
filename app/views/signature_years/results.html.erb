@@ -2,10 +2,10 @@
   <h1>Results for <%= @signature_year.year %></h1>
   <h3>Resume</h2>
   <div class="resume">
-    <p><strong>Total approved: </strong><%= @total_approved %></p>
-    <p><strong>Total disapproved: </strong><%= @total_disapproved %></p>
-    <p><strong>Total ausent: </strong><%= @total_ausent %></p>
-    <p><strong>Approved average: </strong><%= "#{@approved_average.round(2)}%" %></p>
+    <p><strong>Total approved: </strong><%= @totals[:approved] %></p>
+    <p><strong>Total disapproved: </strong><%= @totals[:disapproved] %></p>
+    <p><strong>Total ausent: </strong><%= @totals[:ausent] %></p>
+    <p><strong>Approved average: </strong><%= "#{@totals[:approved_average].round(2)}%" %></p>
   </div>
 </div>
 <table class="table table-striped">

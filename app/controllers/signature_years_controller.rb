@@ -62,10 +62,7 @@ class SignatureYearsController < ApplicationController
 
   def results
     @test_notes = @signature_year.test_notes.order('due_date DESC')
-    @total_approved = @test_notes.where('note >= note_to_approve').count
-    @total_disapproved = @test_notes.where('note < note_to_approve').count
-    @total_ausent = @test_notes.where(note: nil).count
-    @approved_average = (Float(@total_approved) / Float(@test_notes.count)) * 100
+    @totals = TestNoteService.new(@test_notes).totals
   end
 
   def students
