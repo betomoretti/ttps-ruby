@@ -1,0 +1,42 @@
+<div class="page-header">
+  <h1>Multiple load test notes for students</h1>
+</div>
+
+<%= form_for @test, url: tests_test_note_path(@test), method: :post , :class => "form-horizontal tests_test_note" do | ft | %>
+  <% @test_notes.each do | test_note | %>
+    <%= ft.fields_for 'test_notes[]', test_note do |tnf| %>
+      <div class="form-group">
+        <%= tnf.label :note, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <div class="col-lg-2">
+            <%= tnf.text_field :note, :class => 'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= tnf.label :test, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <div class="col-lg-6">
+            <%= tnf.collection_select :test_id, @signature_year.tests, :id, :title, {}, { :class => 'form-control', :disabled => 'disabled' } %>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= tnf.label :student, :class => 'control-label col-lg-2' %>
+        <div class="col-lg-10">
+          <div class="col-lg-6">
+            <%= tnf.collection_select :student_id, @signature_year.students, :id, :email, {}, { :class => 'form-control', :disabled => 'disabled' } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= submit_tag nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                    test_path(@test), :class => 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>

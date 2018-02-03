@@ -26,7 +26,7 @@
   <div class="form-group">
     <%= f.label :test, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.collection_select :test_id, Test.all, :id, :title, :class => 'form-control' %>
+      <%= f.collection_select :test_id, Test.all, :id, :title, {}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:test_id) %>
   </div>
@@ -34,7 +34,7 @@
   <div class="form-group">
     <%= f.label :student, :class => 'control-label col-lg-2' %>
     <div class="col-lg-10">
-      <%= f.collection_select :student_id, Student.all, :id, :dni, :class => 'form-control' %>
+      <%= f.collection_select :student_id, Student.all, :id, :dni, {}, :class => 'form-control' %>
     </div>
     <%=f.error_span(:student_id) %>
   </div>

@@ -17,5 +17,8 @@ Rails.application.routes.draw do
       get 'tests'
     end
   end
-
+  namespace :tests do
+    get '/:test_id/test_notes/new', to: 'test_notes#new', as: :test_note_new
+    post '/:test_id/test_notes', to: 'test_notes#create', as: :test_note
+  end
 end
