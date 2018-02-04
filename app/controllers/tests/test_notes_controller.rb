@@ -2,14 +2,7 @@ class Tests::TestNotesController < ApplicationController
   before_action :set_objects, only: [:new, :create]
 
   def new
-    @test_notes = @signature_year
-      .students
-      .map do |s|
-        TestNote.find_or_create_by(student: s, test: @test) do |tn|
-          tn.student = s
-          tn.test = @test
-        end
-      end
+    @test_notes = TestNoteService.create_test_notes(@signature_year.students, @test)
   end
 
   def create

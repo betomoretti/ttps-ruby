@@ -3,6 +3,10 @@ class TestNoteService
     @test_notes = test_notes
   end
 
+  def self.create_test_notes(students, test)
+    students.map { |s| create(s, test) }
+  end
+
   def totals
     {
       approved: approved_cant,
@@ -13,6 +17,13 @@ class TestNoteService
   end
 
   private
+
+  def self.create(student, test)
+    TestNote.find_or_create_by(student: student, test: test) do |tn|
+      tn.student = student
+      tn.test = test
+    end
+  end
 
   def approved_cant
     @test_notes.where('note >= note_to_approve').count
