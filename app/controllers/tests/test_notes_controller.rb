@@ -9,7 +9,7 @@ class Tests::TestNotesController < ApplicationController
     test_notes = signature_year_params.to_hash["test_notes"]
     respond_to do |format|
       if TestNote.update(test_notes.keys, test_notes.values)
-        format.html { redirect_to @test, notice: 'All test loads were loaded' }
+        format.html { redirect_to @test, notice: t('.success') }
         format.json { render :show, status: :ok, location: @signature_year }
       else
         format.html { render :new }

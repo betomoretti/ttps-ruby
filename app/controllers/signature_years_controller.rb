@@ -27,7 +27,7 @@ class SignatureYearsController < ApplicationController
     @signature_year = SignatureYear.new(signature_year_params)
     respond_to do |format|
       if @signature_year.save
-        format.html { redirect_to @signature_year, notice: 'Signature year was successfully created.' }
+        format.html { redirect_to @signature_year, notice: t('.success') }
         format.json { render :show, status: :created, location: @signature_year }
       else
         format.html { render :new }
@@ -41,7 +41,7 @@ class SignatureYearsController < ApplicationController
   def update
     respond_to do |format|
       if @signature_year.update(signature_year_params)
-        format.html { redirect_to @signature_year, notice: 'Signature year was successfully updated.' }
+        format.html { redirect_to @signature_year, notice: t('.success') }
         format.json { render :show, status: :ok, location: @signature_year }
       else
         format.html { render :edit }
@@ -55,7 +55,7 @@ class SignatureYearsController < ApplicationController
   def destroy
     @signature_year.destroy
     respond_to do |format|
-      format.html { redirect_to signature_years_url, notice: 'Signature year was successfully destroyed.' }
+      format.html { redirect_to signature_years_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

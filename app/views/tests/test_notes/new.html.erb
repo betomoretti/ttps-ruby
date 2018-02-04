@@ -1,5 +1,5 @@
 <div class="page-header">
-  <h1>Multiple load test notes for students</h1>
+  <h1><%= t '.title' %></h1>
 </div>
 
 <%= form_for @test, url: tests_test_note_path(@test), method: :post , :class => "form-horizontal tests_test_note" do | ft | %>
@@ -34,7 +34,7 @@
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= submit_tag nil, :class => 'btn btn-primary' %>
+      <%= submit_tag t('.submit'), :class => 'btn btn-primary' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                     test_path(@test), :class => 'btn btn-default' %>
     </div>

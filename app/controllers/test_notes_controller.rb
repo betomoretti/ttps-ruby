@@ -28,7 +28,7 @@ class TestNotesController < ApplicationController
 
     respond_to do |format|
       if @test_note.save
-        format.html { redirect_to @test_note, notice: 'Test note was successfully created.' }
+        format.html { redirect_to @test_note, notice: t('.success') }
         format.json { render :show, status: :created, location: @test_note }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TestNotesController < ApplicationController
   def update
     respond_to do |format|
       if @test_note.update(test_note_params)
-        format.html { redirect_to @test_note, notice: 'Test note was successfully updated.' }
+        format.html { redirect_to @test_note, notice: t('.success') }
         format.json { render :show, status: :ok, location: @test_note }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TestNotesController < ApplicationController
   def destroy
     @test_note.destroy
     respond_to do |format|
-      format.html { redirect_to test_notes_url, notice: 'Test note was successfully destroyed.' }
+      format.html { redirect_to test_notes_url, notice: t('.success') }
       format.json { head :no_content }
     end
   end

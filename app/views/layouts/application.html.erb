@@ -23,14 +23,14 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <% if signed_in? %>
-              <li><%= link_to 'Students', students_path %></li>
-              <li><%= link_to 'Signature years', signature_years_path %></li>
-              <li><%= link_to 'Tests', tests_path %></li>
-              <li><%= link_to 'Test notes', test_notes_path %></li>
-              <li><%= link_to 'Teachers', teachers_path %></li>
-              <li><%= link_to('Logout', destroy_teacher_session_path, method: :delete) %></li>
+              <li><%= link_to t('activerecord.models.student.other'), students_path %></li>
+              <li><%= link_to t('activerecord.models.signature_year.other'), signature_years_path %></li>
+              <li><%= link_to t('activerecord.models.test.other'), tests_path %></li>
+              <li><%= link_to t('activerecord.models.test_note.other'), test_notes_path %></li>
+              <li><%= link_to t('activerecord.models.teacher.other'), teachers_path %></li>
+              <li><%= link_to t('devise.sessions.sign_out'), destroy_teacher_session_path, method: :delete %></li>
             <% else %>
-              <li><%= link_to('Login', new_teacher_session_path)  %></li>
+              <li><%= link_to t('devise.sessions.sign_in'), new_teacher_session_path  %></li>
             <% end %>
           </ul>
         </div>

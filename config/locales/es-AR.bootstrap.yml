@@ -1,0 +1,25 @@
+es-AR:
+  breadcrumbs:
+    application:
+      root: "Index"
+    pages:
+      pages: "Paginas"
+  helpers:
+    actions: "Acciones"
+    links:
+      show: "Ver"
+      back: "Volver"
+      cancel: "Cancelar"
+      confirm: "¿Estas seguro?"
+      destroy: "Borrar"
+      new: "Nuevo"
+      edit: "Editar"
+      results: "Resultados"
+      students: "Estudiantes"
+      tests: "Evaluaciones"
+      load_massive: Cargar notas
+    titles:
+      edit: "Editar %{model}"
+      save: "Guardar %{model}"
+      new: "Nuevo %{model}"
+      delete: "Borrar %{model}"
