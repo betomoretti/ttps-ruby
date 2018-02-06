@@ -1,5 +1,5 @@
 class SignatureYear < ApplicationRecord
-  has_many :students
-  has_many :tests
+  has_many :students, dependent: :destroy
+  has_many :tests, dependent: :destroy
   has_many :test_notes, through: :tests
 end
