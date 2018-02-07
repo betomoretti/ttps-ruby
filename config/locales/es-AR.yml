@@ -1,5 +1,7 @@
 es-AR:
   signature_years:
+    new:
+      error: 'prohibieron que esta cursada haya sido guardada:'
     create:
       success: 'La cursada ha sido creada exitosamente'
     update:
@@ -231,8 +233,12 @@ es-AR:
     template:
       body: 'Revise que los siguientes campos sean válidos:'
       header:
-        one: "El %{model} no pudo guardarse debido a 1 error"
-        other: "El %{model} no pudo guardarse debido a %{count} errores"
+        student:
+          one: "El estudiante no pudo guardarse debido a 1 error"
+          other: "El estudiante no pudo guardarse debido a %{count} errores"
+        signature_year:
+          one: "La cursada no pudo guardarse debido a 1 error"
+          other: "La cursada no pudo guardarse debido a %{count} errores"
   helpers:
     select:
       prompt: Por favor selecciona

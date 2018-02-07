@@ -18,7 +18,7 @@ class SignatureYearsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create signature_year" do
     assert_difference('SignatureYear.count') do
-      post signature_years_url, params: { signature_year: { year: @signature_year.year } }
+      post signature_years_url, params: { signature_year: { year: '2019' } }
     end
 
     assert_redirected_to signature_year_url(SignatureYear.last)
