@@ -233,6 +233,9 @@ es-AR:
     template:
       body: 'Revise que los siguientes campos sean válidos:'
       header:
+        test:
+          one: "La evaluación no pudo guardarse debido a 1 error"
+          other: "La evaluación no pudo guardarse debido a %{count} errores"
         student:
           one: "El estudiante no pudo guardarse debido a 1 error"
           other: "El estudiante no pudo guardarse debido a %{count} errores"

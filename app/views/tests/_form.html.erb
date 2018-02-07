@@ -3,7 +3,7 @@
   <% if @test.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@test.errors.count, "error") %> prohibited this test from being saved:</h3>
+        <h3 class="panel-title"><%= t("errors.template.header.test.#{@test.errors.count > 1 ? 'other' : 'one' }", {count: @test.errors.count, model: @test.model_name.human.downcase}) %></h3>
       </div>
       <div class="panel-body">
         <ul>
