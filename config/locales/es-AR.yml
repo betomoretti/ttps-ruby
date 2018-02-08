@@ -10,7 +10,8 @@ es-AR:
       success: 'La cursada ha sido eliminada exitosamente'
     results:
       title: "Resultados para la cursada del %{signature_year}"
-      subtitle: Resumen
+      resume_subtitle: Resumen de cursada
+      test_resume_subtitle: Resumen de parciales
       total_approved: Total de aprobados
       total_disapproved: Total de desaprobados
       total_ausent: Total de ausentes

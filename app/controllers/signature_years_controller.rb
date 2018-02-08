@@ -62,7 +62,7 @@ class SignatureYearsController < ApplicationController
 
   def results
     @test_notes = @signature_year.test_notes.order('due_date DESC')
-    @totals = TestNoteService.new(@test_notes).totals
+    @totals = TestNoteService.new(@test_notes, @signature_year.students, @signature_year).totals
   end
 
   def students

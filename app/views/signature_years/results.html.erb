@@ -1,12 +1,9 @@
 <div class="page-header">
   <h1><%= t('.title', signature_year: @signature_year.year) %></h1>
-  <h3><%= t '.subtitle' %></h2>
-  <div class="resume">
-    <p><strong><%= t '.total_approved' %> </strong><%= @totals[:approved] %></p>
-    <p><strong><%= t '.total_disapproved' %> </strong><%= @totals[:disapproved] %></p>
-    <p><strong><%= t '.total_ausent' %> </strong><%= @totals[:ausent] %></p>
-    <p><strong><%= t '.approved_average' %> </strong><%= "#{@totals[:approved_average].round(2)}%" %></p>
-  </div>
+  <h3><%= t '.test_resume_subtitle' %></h3>
+  <% @totals.each do |tn| %>
+    <p>Nombre:<%= tn[:name] %>, Total de aprobados: <%= tn[:total_approved] %>, Total desaprobados: <%= tn[:total_disapproved] %>, Total ausentes: <%= tn[:total_ausent] %>, Procentaje de aprobados: <%= tn[:approved_average] %></p>
+  <% end %>
 </div>
 <table class="table table-striped">
   <thead>
