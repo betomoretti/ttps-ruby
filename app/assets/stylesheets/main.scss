@@ -1,0 +1,7 @@
+.btn-primary-custom {
+  &:hover {
+    box-shadow: -1px 1px 5px 0px lightslategrey;
+  }
+  border-radius: 2px;
+  padding: 3px 8px;
+}

@@ -1,0 +1,16 @@
+.custom-panel {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  max-width: 200px;
+}
+
+.new_teacher {
+  input[type="checkbox"] {
+    float: left;
+  }
+
+  label.remember_me {
+    padding-left: 15px;
+    padding-top: 2px;
+  }
+}
