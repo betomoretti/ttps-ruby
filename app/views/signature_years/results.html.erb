@@ -1,20 +1,20 @@
 <div class="page-header">
-  <h1>Results for <%= @signature_year.year %></h1>
-  <h3>Resume</h2>
+  <h1><%= t('.title', signature_year: @signature_year.year) %></h1>
+  <h3><%= t '.subtitle' %></h2>
   <div class="resume">
-    <p><strong>Total approved: </strong><%= @totals[:approved] %></p>
-    <p><strong>Total disapproved: </strong><%= @totals[:disapproved] %></p>
-    <p><strong>Total ausent: </strong><%= @totals[:ausent] %></p>
-    <p><strong>Approved average: </strong><%= "#{@totals[:approved_average].round(2)}%" %></p>
+    <p><strong><%= t '.total_approved' %> </strong><%= @totals[:approved] %></p>
+    <p><strong><%= t '.total_disapproved' %> </strong><%= @totals[:disapproved] %></p>
+    <p><strong><%= t '.total_ausent' %> </strong><%= @totals[:ausent] %></p>
+    <p><strong><%= t '.approved_average' %> </strong><%= "#{@totals[:approved_average].round(2)}%" %></p>
   </div>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Student number</th>
-      <th>Test</th>
-      <th>Note</th>
-      <th>Approved?</th>
+      <th><%= t '.table.columns.student' %></th>
+      <th><%= t '.table.columns.test' %></th>
+      <th><%= t '.table.columns.note' %></th>
+      <th><%= t '.table.columns.approved?' %></th>
     </tr>
   </thead>
   <tbody>
@@ -22,8 +22,8 @@
       <tr>
         <td><%= link_to test_note.student.number, student_path(test_note.student) %></td>
         <td><%= link_to test_note.test.title, test_path(test_note.test) %></td>
-        <td><%= link_to test_note.note || 'ausent', test_note_path(test_note) %></td>
-        <td><%= test_note.approved? %></td>
+        <td><%= link_to test_note.note || t('.table.values._ausent'), test_note_path(test_note) %></td>
+        <td><%= t ".table.values._#{test_note.approved?}" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -8,6 +8,23 @@ es-AR:
       success: 'La cursada ha sido actualizada exitosamente'
     destroy:
       success: 'La cursada ha sido eliminada exitosamente'
+    results:
+      title: "Resultados para la cursada del %{signature_year}"
+      subtitle: Resumen
+      total_approved: Total de aprobados
+      total_disapproved: Total de desaprobados
+      total_ausent: Total de ausentes
+      approved_average: Promedio de aprobados
+      table:
+        columns:
+          student_number: Numero de legajo
+          test: Evaluación
+          note: Nota
+          approved?: Aprobado?
+        values:
+          _yes: Si
+          _no: "No"
+          _ausent: Ausente
   tests:
     create:
       success: 'La evaluación ha sido creada exitosamente'
