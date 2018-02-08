@@ -17,7 +17,7 @@
 
   <div class="form-group">
     <%= f.label :year, :class => 'control-label col-lg-2' %>
-    <div class="col-lg-10">
+    <div class="col-lg-2">
       <%= f.text_field :year, :class => 'form-control' %>
     </div>
     <%=f.error_span(:year) %>
@@ -25,9 +25,9 @@
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= f.submit nil, :class => 'btn btn-primary btn-custom' %>
       <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                signature_years_path, :class => 'btn btn-default' %>
+                signature_years_path, :class => 'btn btn-default btn-custom' %>
     </div>
   </div>
 
